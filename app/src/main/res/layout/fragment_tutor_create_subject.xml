@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tutorCreateSubjectFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.TutorCreateSubjectFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/white_abstract_wallpaper_23_2148830026">
+
+        <TextView
+            android:id="@+id/tutorCreateSubjectTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="108dp"
+            android:fontFamily="serif"
+            android:text="Enter subject information:"
+            android:textColor="@color/blue"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tutorCreateSubjectNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="serif"
+            android:text="Name"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/tutorCreateSubjectNameInput"
+            app:layout_constraintTop_toBottomOf="@+id/tutorCreateSubjectTitle" />
+
+        <EditText
+            android:id="@+id/tutorCreateSubjectNameInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="serif"
+            android:inputType="textPersonName"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tutorCreateSubjectNameText" />
+
+        <TextView
+            android:id="@+id/tutorCreateSubjectShortDescText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="serif"
+            android:text="Short description"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/tutorCreateSubjectShortDescInput"
+            app:layout_constraintTop_toBottomOf="@+id/tutorCreateSubjectNameInput" />
+
+        <EditText
+            android:id="@+id/tutorCreateSubjectShortDescInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="serif"
+            android:inputType="textPersonName"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tutorCreateSubjectShortDescText" />
+
+        <TextView
+            android:id="@+id/tutorCreateSubjectDescText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="serif"
+            android:text="Description"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/tutorCreateSubjectDescInput"
+            app:layout_constraintTop_toBottomOf="@+id/tutorCreateSubjectShortDescInput" />
+
+        <EditText
+            android:id="@+id/tutorCreateSubjectDescInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="serif"
+            android:inputType="textPersonName"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tutorCreateSubjectDescText" />
+
+        <TextView
+            android:id="@+id/tutorCreateSubjectImageText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="serif"
+            android:text="Image URL"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/tutorCreateSubjectImageInput"
+            app:layout_constraintTop_toBottomOf="@+id/tutorCreateSubjectDescInput" />
+
+        <EditText
+            android:id="@+id/tutorCreateSubjectImageInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="serif"
+            android:inputType="textPersonName"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tutorCreateSubjectImageText" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/tutorCreateSubjectBackBtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/back_btn_blue"
+            android:padding="10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/arrow_white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/tutorCreateSubjectButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:background="@drawable/text_btn"
+            android:fontFamily="serif"
+            android:text="\t\tCreate subject\t\t"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tutorCreateSubjectImageInput" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tutorSubjectQuizResFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.TutorSubjectQuizResFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/white_abstract_wallpaper_23_2148830026">
+
+        <ImageView
+            android:id="@+id/tutorSubjectQuizResImage"
+            android:layout_width="0dp"
+            android:layout_height="94dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/fading_gradient"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tutorSubjectQuizResTitle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="-10dp"
+            android:layout_marginTop="-10dp"
+            android:layout_marginEnd="-10dp"
+            android:background="@drawable/fading_gradient"
+            android:fontFamily="serif"
+            android:text="\n\n\t\tSubject Name"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tutorSubjectQuizResImage"
+            app:layout_constraintEnd_toEndOf="@+id/tutorSubjectQuizResImage"
+            app:layout_constraintStart_toStartOf="@+id/tutorSubjectQuizResImage"
+            app:layout_constraintTop_toTopOf="@+id/tutorSubjectQuizResImage" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/tutorSubjectVQuizResBackButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/back_btn_white"
+            android:padding="10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/blue_arrow"
+            app:layout_constraintBottom_toBottomOf="@+id/tutorSubjectQuizResImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tutorSubjectQuizResDesc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="serif"
+            android:text="Quiz {name} results"
+            android:textColor="@color/blue"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tutorSubjectQuizResImage" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/tutorSubjectQuizResList"
+            android:layout_width="0dp"
+            android:layout_height="588dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tutorSubjectQuizResDesc" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

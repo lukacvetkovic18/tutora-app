@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tutorHomeFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.TutorHomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/white_abstract_wallpaper_23_2148830026">
+
+        <ImageView
+            android:id="@+id/tutorHomeTitleBck"
+            android:layout_width="0dp"
+            android:layout_height="62dp"
+            android:layout_marginStart="-10dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="-30dp"
+            android:src="@drawable/title_background"
+            app:layout_constraintEnd_toEndOf="@+id/tutorHomeTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tutorHomeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="serif"
+            android:text="Welcome"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tutorHomeTitleBck" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/tutorHomeLogout"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/back_btn_blue"
+            android:padding="10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/exit_icon_exit_icon_11553390342opn2diup1c"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/tutorHomeAddSubject"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/back_btn_white"
+            android:padding="10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/plus_icon_plus_svg_png_icon_download_1"
+            app:layout_constraintStart_toEndOf="@+id/tutorHomeListTitle"
+            app:layout_constraintTop_toBottomOf="@+id/tutorHomeTitleBck" />
+
+        <TextView
+            android:id="@+id/tutorHomeListTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="14dp"
+            android:fontFamily="serif"
+            android:text="Your subjects:"
+            android:textColor="@color/blue"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tutorHomeTitleBck" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/tutorHomeSubjectRecyclerView"
+            android:layout_width="409dp"
+            android:layout_height="609dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tutorHomeListTitle" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

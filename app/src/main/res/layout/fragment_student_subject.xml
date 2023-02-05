@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/StudentSubjectFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.StudentSubjectFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/white_abstract_wallpaper_23_2148830026">
+
+        <ImageView
+            android:id="@+id/studentSubjectLine1"
+            android:layout_width="380dp"
+            android:layout_height="5dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/black_line"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/studentSubjectDescription" />
+
+        <ImageView
+            android:id="@+id/studentSubjectImage"
+            android:layout_width="0dp"
+            android:layout_height="94dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/fading_gradient"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/studentSubjectTitle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="-10dp"
+            android:layout_marginTop="-10dp"
+            android:layout_marginEnd="-10dp"
+            android:background="@drawable/fading_gradient"
+            android:fontFamily="serif"
+            android:text="\n\n\t\tSubject Name"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/studentSubjectImage"
+            app:layout_constraintEnd_toEndOf="@+id/studentSubjectImage"
+            app:layout_constraintStart_toStartOf="@+id/studentSubjectImage"
+            app:layout_constraintTop_toTopOf="@+id/studentSubjectImage" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/studentSubjectBackButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/back_btn_white"
+            android:padding="10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/blue_arrow"
+            app:layout_constraintBottom_toBottomOf="@+id/studentSubjectImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/studentSubjectDescTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="serif"
+            android:text="About"
+            android:textColor="@color/blue"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/studentSubjectImage" />
+
+        <TextView
+            android:id="@+id/studentSubjectDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="serif"
+            android:text="Description"
+            android:textColor="@color/blue"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/studentSubjectDescTitle"
+            app:layout_constraintTop_toBottomOf="@+id/studentSubjectDescTitle" />
+
+        <TextView
+            android:id="@+id/studentSubjectQuizSolve"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="serif"
+            android:text="Quiz available:"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/studentSubjectLine1" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/studentSubjectQuizAvailableRecyclerView"
+            android:layout_width="0dp"
+            android:layout_height="135dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/studentSubjectQuizSolve"
+            app:layout_constraintTop_toBottomOf="@+id/studentSubjectQuizSolve" >
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <ImageView
+            android:id="@+id/studentSubjectLine2"
+            android:layout_width="380dp"
+            android:layout_height="5dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/black_line"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/studentSubjectQuizAvailableRecyclerView" />
+
+        <TextView
+            android:id="@+id/studentSubjectQuizRes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="serif"
+            android:text="Quiz results:"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/studentSubjectQuizAvailableRecyclerView"
+            app:layout_constraintTop_toBottomOf="@+id/studentSubjectLine2" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/studentSubjectQuizResRecyclerView"
+            android:layout_width="0dp"
+            android:layout_height="133dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/studentSubjectQuizRes"
+            app:layout_constraintTop_toBottomOf="@+id/studentSubjectQuizRes">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/studentSubjectAddStudentBtn"
+            android:layout_width="150dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/text_btn_red"
+            android:fontFamily="serif"
+            android:text="Leave subject"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/studentSubjectQuizResRecyclerView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/registerFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.RegisterFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/white_abstract_wallpaper_23_2148830026">
+
+        <TextView
+            android:id="@+id/regLastNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="serif"
+            android:text="Last Name"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/regLastNameInput"
+            app:layout_constraintTop_toBottomOf="@+id/regFirstNameInput" />
+
+        <TextView
+            android:id="@+id/regDescText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:fontFamily="serif"
+            android:text="Please enter your information"
+            android:textColor="@color/blue"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/regFirstNameInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="serif"
+            android:inputType="textPersonName"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/regFirstNameText" />
+
+        <EditText
+            android:id="@+id/regEmailInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="serif"
+            android:inputType="textEmailAddress"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/regEmailText" />
+
+        <TextView
+            android:id="@+id/regFirstNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="serif"
+            android:text="First Name"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/regFirstNameInput"
+            app:layout_constraintTop_toBottomOf="@+id/regDescText" />
+
+        <EditText
+            android:id="@+id/regPassInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="serif"
+            android:inputType="textPassword"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/regPassText" />
+
+        <TextView
+            android:id="@+id/regEmailText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="serif"
+            android:text="Email"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/regEmailInput"
+            app:layout_constraintTop_toBottomOf="@+id/regAgeInput" />
+
+        <EditText
+            android:id="@+id/regLastNameInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="serif"
+            android:inputType="textPersonName"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/regLastNameText" />
+
+        <RadioGroup
+            android:id="@+id/regRoleGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/regPassInput">
+
+            <RadioButton
+                android:id="@+id/regTutorButton"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif"
+                android:text="Tutor"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/regStudentButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif"
+                android:text="Student"
+                android:textSize="16sp" />
+        </RadioGroup>
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/regBackBtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/back_btn_blue"
+            android:padding="10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/arrow_white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/regPassText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="serif"
+            android:text="Password"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/regPassInput"
+            app:layout_constraintTop_toBottomOf="@+id/regEmailInput" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/regButton"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/text_btn"
+            android:fontFamily="serif"
+            android:text="Register"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/regRoleGroup" />
+
+        <TextView
+            android:id="@+id/regAgeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="serif"
+            android:text="Age"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/regAgeInput"
+            app:layout_constraintTop_toBottomOf="@+id/regLastNameInput" />
+
+        <EditText
+            android:id="@+id/regAgeInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="serif"
+            android:inputType="textPersonName"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/regAgeText" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

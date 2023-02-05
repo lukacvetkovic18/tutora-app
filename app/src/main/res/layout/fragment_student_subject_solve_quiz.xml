@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/studentSubjectSolveQuizFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.StudentSubjectSolveQuizFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/white_abstract_wallpaper_23_2148830026">
+
+        <ImageView
+            android:id="@+id/studentSubjectSolveQuizImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="94dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/fading_gradient"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher_background" />
+
+        <TextView
+            android:id="@+id/studentSubjectSolveQuizTitle"
+            app:layout_constraintBottom_toBottomOf="@+id/studentSubjectSolveQuizImage"
+            app:layout_constraintEnd_toEndOf="@+id/studentSubjectSolveQuizImage"
+            app:layout_constraintStart_toStartOf="@+id/studentSubjectSolveQuizImage"
+            app:layout_constraintTop_toTopOf="@+id/studentSubjectSolveQuizImage"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="-10dp"
+            android:layout_marginTop="-10dp"
+            android:layout_marginEnd="-10dp"
+            android:background="@drawable/fading_gradient"
+            android:fontFamily="serif"
+            android:text="\n\n\t\tSubject Name"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/studentSubjectSolveQuizBackButton"
+            app:layout_constraintBottom_toBottomOf="@+id/studentSubjectSolveQuizImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/back_btn_white"
+            android:padding="10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/blue_arrow" />
+
+        <TextView
+            android:id="@+id/studentSubjectSolveQuizDesc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="serif"
+            android:text="Quiz name"
+            android:textColor="@color/blue"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/studentSubjectSolveQuizImage" />
+
+        <TextView
+            android:id="@+id/studentSubjectSolveQuizQ1Num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="serif"
+            android:text="1.\t"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/studentSubjectSolveQuizDesc"
+            app:layout_constraintTop_toBottomOf="@+id/studentSubjectSolveQuizDesc" />
+
+        <TextView
+            android:id="@+id/studentSubjectSolveQuizQ1Txt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="serif"
+            android:text="Question"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/studentSubjectSolveQuizQ1Num"
+            app:layout_constraintTop_toTopOf="@+id/studentSubjectSolveQuizQ1Num" />
+
+        <EditText
+            android:id="@+id/studentSubjectSolveQuizA1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="20dp"
+            android:ems="10"
+            android:fontFamily="serif"
+            android:inputType="textPersonName"
+            android:textColor="@color/grey"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/studentSubjectSolveQuizQ1Num"
+            app:layout_constraintTop_toBottomOf="@+id/studentSubjectSolveQuizQ1Num" />
+
+        <TextView
+            android:id="@+id/studentSubjectSolveQuizQ2Num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="serif"
+            android:text="2.\t"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/studentSubjectSolveQuizA1"
+            app:layout_constraintTop_toBottomOf="@+id/studentSubjectSolveQuizA1" />
+
+        <TextView
+            android:id="@+id/studentSubjectSolveQuizQ2Txt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="serif"
+            android:text="Question"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/studentSubjectSolveQuizQ2Num"
+            app:layout_constraintTop_toTopOf="@+id/studentSubjectSolveQuizQ2Num" />
+
+        <EditText
+            android:id="@+id/studentSubjectSolveQuizA2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="20dp"
+            android:ems="10"
+            android:fontFamily="serif"
+            android:inputType="textPersonName"
+            android:textColor="@color/grey"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/studentSubjectSolveQuizQ2Num"
+            app:layout_constraintTop_toBottomOf="@+id/studentSubjectSolveQuizQ2Num" />
+
+        <TextView
+            android:id="@+id/studentSubjectSolveQuizQ3Num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="serif"
+            android:text="3.\t"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/studentSubjectSolveQuizA2"
+            app:layout_constraintTop_toBottomOf="@+id/studentSubjectSolveQuizA2" />
+
+        <TextView
+            android:id="@+id/studentSubjectSolveQuizQ3Txt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="serif"
+            android:text="Question"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/studentSubjectSolveQuizQ3Num"
+            app:layout_constraintTop_toTopOf="@+id/studentSubjectSolveQuizQ3Num" />
+
+        <EditText
+            android:id="@+id/studentSubjectSolveQuizA3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="20dp"
+            android:ems="10"
+            android:fontFamily="serif"
+            android:inputType="textPersonName"
+            android:textColor="@color/grey"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/studentSubjectSolveQuizQ3Num"
+            app:layout_constraintTop_toBottomOf="@+id/studentSubjectSolveQuizQ3Num" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/studentSubjectSolveQuizSaveBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/text_btn"
+            android:fontFamily="serif"
+            android:text="\tSave Answers\t\t"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/studentSubjectSolveQuizA3" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

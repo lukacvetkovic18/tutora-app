@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tutorSubjectFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.TutorSubjectFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/white_abstract_wallpaper_23_2148830026">
+
+        <ImageView
+            android:id="@+id/tutorSubjectImage"
+            android:layout_width="0dp"
+            android:layout_height="94dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/fading_gradient"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tutorSubjectTitle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="-10dp"
+            android:layout_marginTop="-10dp"
+            android:layout_marginEnd="-10dp"
+            android:background="@drawable/fading_gradient"
+            android:fontFamily="serif"
+            android:text="\n\n\t\tSubject Name"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tutorSubjectImage"
+            app:layout_constraintEnd_toEndOf="@+id/tutorSubjectImage"
+            app:layout_constraintStart_toStartOf="@+id/tutorSubjectImage"
+            app:layout_constraintTop_toTopOf="@+id/tutorSubjectImage" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/tutorSubjectBackButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/back_btn_white"
+            android:padding="10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/blue_arrow"
+            app:layout_constraintBottom_toBottomOf="@+id/tutorSubjectImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tutorSubjectViewStudents"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="serif"
+            android:text="About"
+            android:textColor="@color/blue"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tutorSubjectImage" />
+
+        <TextView
+            android:id="@+id/tutorSubjectDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="serif"
+            android:text="Description"
+            android:textColor="@color/blue"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tutorSubjectViewStudents"
+            app:layout_constraintTop_toBottomOf="@+id/tutorSubjectViewStudents" />
+
+        <ImageView
+            android:id="@+id/tutorSubjectLine"
+            android:layout_width="380dp"
+            android:layout_height="5dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/black_line"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tutorSubjectDescription" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/tutorSubjectSeeStudentsBtn"
+            android:layout_width="230dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/text_btn_grey"
+            android:fontFamily="serif"
+            android:text="Students on subject"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tutorSubjectLine" />
+
+        <TextView
+            android:id="@+id/tutorSubjectQuizRes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="serif"
+            android:text="Quiz results"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tutorSubjectSeeStudentsBtn" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/tutorSubjectQuizResRecyclerView"
+            android:layout_width="410dp"
+            android:layout_height="154dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tutorSubjectQuizRes" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/tutorSubjectCreateQuitBtn"
+            android:layout_width="180dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/text_btn_grey"
+            android:fontFamily="serif"
+            android:text="Create new quiz"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tutorSubjectQuizResRecyclerView" />
+
+        <ImageView
+            android:id="@+id/tutorSubjectAddStudentBg"
+            android:layout_width="506dp"
+            android:layout_height="381dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/transparent_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tutorSubjectCreateQuitBtn" />
+
+        <TextView
+            android:id="@+id/tutorSubjectAddStudentTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="serif"
+            android:text="Add student to subject"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/tutorSubjectAddStudentBg"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="@+id/tutorSubjectAddStudentBg"
+            app:layout_constraintTop_toTopOf="@+id/tutorSubjectAddStudentBg" />
+
+        <TextView
+            android:id="@+id/tutorSubjectAddStudentEmailTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="serif"
+            android:text="Enter student email"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/tutorSubjectAddStudentBg"
+            app:layout_constraintStart_toStartOf="@+id/tutorSubjectAddStudentBg"
+            app:layout_constraintTop_toBottomOf="@+id/tutorSubjectAddStudentTxt" />
+
+        <EditText
+            android:id="@+id/tutorSubjectAddStudentEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:fontFamily="serif"
+            android:inputType="textEmailAddress"
+            app:layout_constraintEnd_toEndOf="@+id/tutorSubjectAddStudentBg"
+            app:layout_constraintStart_toStartOf="@+id/tutorSubjectAddStudentBg"
+            app:layout_constraintTop_toBottomOf="@+id/tutorSubjectAddStudentEmailTxt" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/tutorSubjectAddStudentBtn"
+            android:layout_width="80dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/text_btn"
+            android:fontFamily="serif"
+            android:text="Add"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/tutorSubjectAddStudentBg"
+            app:layout_constraintStart_toStartOf="@+id/tutorSubjectAddStudentBg"
+            app:layout_constraintTop_toBottomOf="@+id/tutorSubjectAddStudentEdit" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
